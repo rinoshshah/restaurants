@@ -1,9 +1,10 @@
 import React from "react";
 import { Card } from "react-bootstrap";
+import { Link } from 'react-router-dom'
 
 function Restaurants({ item }) {
   return (
-    <>
+    <Link to={`restaurant/${item.name}/${item.id}`}>
       <Card className="my-2 p-3 rounded">
         <Card.Img variant="top" src={item.photograph}></Card.Img>
         <Card.Title as='div' className="text-center p-2">
@@ -17,7 +18,7 @@ function Restaurants({ item }) {
 
         </Card.Title>
       </Card>
-    </>
+    </Link>
   );
 }
 
